@@ -24,8 +24,9 @@ const formTask = (taskName, isChecked = false, index) => {
     
     let spanEle = document.createElement("span");
     spanEle.id = `span${index}`;
-    spanEle.innerHTML = isChecked ? `<del>${taskName}</del>` : taskName;
-    checkBox.classList.add('taskName');
+    spanEle.innerText= taskName;
+    if(isChecked)
+        spanEle.classList.add('done');
     newTaskElement.appendChild(spanEle);
 
     let buttonEle = document.createElement("button");
