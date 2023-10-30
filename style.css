@@ -1,0 +1,22 @@
+* {
+    margin: 5px;
+    padding: 5px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.insideContent {
+    flex-direction: row;
+}
+
+.dataContent {
+    align-items: center;
+}
+
+input {
+    border-radius: 5px;
+}
