@@ -16,8 +16,7 @@ const formTask = (taskName, isChecked = false, index) => {
     let checkBox = document.createElement("input");
     checkBox.type = 'checkbox';
     checkBox.id ="checkbox"+index;
-    checkBox.classList.add('input');
-    checkBox.value = isChecked;
+    checkBox.checked = isChecked;
     checkBox.addEventListener('change', function handleClick(event) {
         markTask(event);
     });
@@ -26,6 +25,7 @@ const formTask = (taskName, isChecked = false, index) => {
     let spanEle = document.createElement("span");
     spanEle.id = `span${index}`;
     spanEle.innerHTML = isChecked ? `<del>${taskName}</del>` : taskName;
+    checkBox.classList.add('taskName');
     newTaskElement.appendChild(spanEle);
 
     let buttonEle = document.createElement("button");
